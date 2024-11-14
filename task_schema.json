@@ -4,29 +4,36 @@
     "properties": {
         "tasks": {
             "type": "array",
+            "description": "A list of tasks that need to be performed. Each task is represented as a string. The list must contain at least one task.",
             "items": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "A task represented as a non-empty string."
             },
             "minItems": 1
         },
         "config": {
             "type": "object",
+            "description": "Configuration settings for the task session. Configuration settings must include a session name, split sentence flag, pronunciation time, and gap time.",
             "properties": {
                 "session_name": {
                     "type": "string",
-                    "minLength": 1
+                    "minLength": 1,
+                    "description": "A name for the session. This is used to identify the session."
                 },
                 "split_sentence": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "A flag indicating whether the sentence should be split into individual words or kept whole."
                 },
                 "pronunciation_time": {
                     "type": "integer",
-                    "minimum": 1
+                    "minimum": 1,
+                    "description": "The time (in seconds) allocated for pronunciation. It defines how long to wait before proceeding to the next task."
                 },
                 "gap_time": {
                     "type": "integer",
-                    "minimum": 1
+                    "minimum": 1,
+                    "description": "The gap time (in seconds) between tasks, allowing for a pause before the next task begins."
                 }
             },
             "required": [
@@ -42,5 +49,6 @@
         "tasks",
         "config"
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "description": "The root object contains a list of tasks and a configuration object."
 }
