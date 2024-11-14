@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "tasks": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "minItems": 1
+        },
+        "config": {
+            "type": "object",
+            "properties": {
+                "session_name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "split_sentence": {
+                    "type": "boolean"
+                },
+                "pronunciation_time": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "gap_time": {
+                    "type": "integer",
+                    "minimum": 1
+                }
+            },
+            "required": [
+                "session_name",
+                "split_sentence",
+                "pronunciation_time",
+                "gap_time"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "tasks",
+        "config"
+    ],
+    "additionalProperties": false
+}
