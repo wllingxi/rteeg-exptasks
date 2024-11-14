@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://cdn.jsdelivr.net/gh/wllingxi/rteeg-exptasks@main/task_schema_v2.json
+tasks:
+  - 我 想 上 厕所
+  - 我 想 吃饭
+  - 走吧
+  - 我 想 看 书
+  - 我 想 看 手机
+  - 我 要 洗 脸
+  - 我 要 洗 手
+  - 我 要 洗 澡
+  - 走 去 哪
+  - 好 吃
+config:
+  session_name: EXP_online_sentence_test
+  split_sentence: true
+  pronunciation_time: 2
+  gap_time: 1
